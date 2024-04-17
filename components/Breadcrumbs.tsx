@@ -7,7 +7,7 @@ const Breadcrumbs = () => {
     const pathNames = ['home', ...paths.split('/').filter((path) => path)];
 
     return (
-        <div className='text-md breadcrumbs'>
+        <section className='text-md breadcrumbs'>
             <ul>
                 {pathNames.map((path, index) => {
                     const linkHref = `/${pathNames.slice(1, index + 1).join('/')}`;
@@ -20,7 +20,7 @@ const Breadcrumbs = () => {
                     );
                 })}
             </ul>
-        </div>
+        </section>
     );
 };
 

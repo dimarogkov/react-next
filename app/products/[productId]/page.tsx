@@ -1,4 +1,3 @@
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { notFound } from 'next/navigation';
 
 type Props = {
@@ -16,8 +15,6 @@ const ProductDetailsPage: React.FC<Props> = ({ params }) => {
 
     return (
         <section>
-            <Breadcrumbs />
-
             <h2 className='text-xl'>Product ID - {productId}</h2>
             <h2>Product Details Page</h2>
         </section>

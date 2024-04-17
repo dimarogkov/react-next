@@ -1,4 +1,3 @@
-import Breadcrumbs from '../../components/Breadcrumbs';
 import ButtonLink from '../../components/ButtonLink';
 
 type Product = {
@@ -15,8 +14,6 @@ const products: Product[] = [
 const ProductsPage = () => {
     return (
         <section>
-            <Breadcrumbs />
-
             <h2 className='text-xl'>Products Page</h2>
 
             <ul>

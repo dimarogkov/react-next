@@ -1,6 +1,3 @@
-import Breadcrumbs from '@/components/Breadcrumbs';
-import ButtonLink from '@/components/ButtonLink';
-
 type Props = {
     params: {
         slug: string[];
@@ -12,8 +9,6 @@ const DocsPage: React.FC<Props> = ({ params }) => {
 
     return (
         <section>
-            <Breadcrumbs />
-
             {!slug?.length ? (
                 <>
                     <h2 className='text-xl'>Docs Page</h2>
