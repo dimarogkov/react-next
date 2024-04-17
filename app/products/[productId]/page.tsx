@@ -1,8 +1,15 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 type Props = {
     params: {
         productId: string;
+    };
+};
+
+export const generateMetadata = ({ params }: Props): Metadata => {
+    return {
+        title: `Product ID - ${params.productId}`,
     };
 };
 
