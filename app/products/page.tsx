@@ -19,7 +19,7 @@ const ProductsPage = () => {
             <ul>
                 {products.map(({ id, name }) => (
                     <li key={id}>
-                        <ButtonLink href={`products/${id + 1}`} name={name} />
+                        <ButtonLink href={`/products/${id + 1}`} name={name} />
                     </li>
                 ))}
             </ul>

@@ -2,13 +2,13 @@ type Props = {
     children: React.ReactNode;
 };
 
-const WithAuthLayout: React.FC<Props> = ({ children }) => {
+const withAuthLayout: React.FC<Props> = ({ children }) => {
     return (
         <>
-            <h1>This is Auth Layout</h1>
+            <h1 className='text-xl'>With Auth Layout</h1>
             {children}
         </>
     );
 };
 
-export default WithAuthLayout;
+export default withAuthLayout;
