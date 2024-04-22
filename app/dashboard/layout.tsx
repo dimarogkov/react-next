@@ -7,8 +7,10 @@ type Props = {
 const DashboardLayout: React.FC<Props> = ({ children, metrics, notifications }) => {
     return (
         <>
-            {notifications}
             {children}
+            <br />
+            {notifications}
+            <br />
             {metrics}
         </>
     );
