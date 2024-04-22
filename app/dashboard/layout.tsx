@@ -2,10 +2,13 @@ type Props = {
     children: React.ReactNode;
     metrics: React.ReactNode;
     notifications: React.ReactNode;
+    login: React.ReactNode;
 };
 
-const DashboardLayout: React.FC<Props> = ({ children, metrics, notifications }) => {
-    return (
+const DashboardLayout: React.FC<Props> = ({ children, metrics, notifications, login }) => {
+    const isLoggedIn = true;
+
+    return isLoggedIn ? (
         <>
             {children}
             <br />
@@ -13,6 +16,8 @@ const DashboardLayout: React.FC<Props> = ({ children, metrics, notifications }) 
             <br />
             {metrics}
         </>
+    ) : (
+        <>{login}</>
     );
 };
 
