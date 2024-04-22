@@ -4,6 +4,7 @@ const links = [
     { name: 'About Page', href: '/about' },
     { name: 'Blog Page', href: '/blog' },
     { name: 'Products Page', href: '/products' },
+    { name: 'Dashboard Page', href: '/dashboard' },
     { name: 'Docs Page', href: '/docs' },
     { name: 'Login Page', href: '/login' },
 ];
