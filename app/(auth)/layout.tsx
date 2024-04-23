@@ -1,13 +1,8 @@
 'use client';
 import cn from 'classnames';
 import { usePathname } from 'next/navigation';
+import { authLinks } from '@/data/links';
 import Link from 'next/link';
-
-const links = [
-    { name: 'Login Page', href: '/login' },
-    { name: 'Register Page', href: '/register' },
-    { name: 'Forgot Password Page', href: '/forgot-password' },
-];
 
 type Props = {
     children: React.ReactNode;
@@ -21,7 +16,7 @@ const RootAuthLayout: React.FC<Props> = ({ children }) => {
             <h1 className='text-xl mb-4'>This is Auth Layout</h1>
 
             <ul className='mb-4'>
-                {links.map(({ name, href }) => {
+                {authLinks.map(({ name, href }) => {
                     const isActive = pathName.startsWith(href);
 
                     return (

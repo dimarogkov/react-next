@@ -1,13 +1,5 @@
 import ButtonLink from '../components/ButtonLink';
-
-const links = [
-    { name: 'About Page', href: '/about' },
-    { name: 'Blog Page', href: '/blog' },
-    { name: 'Products Page', href: '/products' },
-    { name: 'Dashboard Page', href: '/dashboard' },
-    { name: 'Docs Page', href: '/docs' },
-    { name: 'Login Page', href: '/login' },
-];
+import { rootLinks } from '@/data/links';
 
 const HomePage = () => {
     return (
@@ -15,7 +7,7 @@ const HomePage = () => {
             <h1 className='text-xl'>Home Page</h1>
 
             <ul>
-                {links.map(({ name, href }) => (
+                {rootLinks.map(({ name, href }) => (
                     <li key={name}>
                         <ButtonLink href={href} name={name} />
                     </li>

@@ -1,15 +1,5 @@
 import ButtonLink from '../../components/ButtonLink';
-
-type Product = {
-    id: number;
-    name: string;
-};
-
-const products: Product[] = [
-    { id: 0, name: 'Product Details First' },
-    { id: 1, name: 'Product Details Second' },
-    { id: 2, name: 'Product Details Last' },
-];
+import { products } from '@/data/products';
 
 const ProductsPage = () => {
     return (
