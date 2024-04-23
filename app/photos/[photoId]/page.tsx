@@ -9,7 +9,7 @@ type Props = {
 };
 
 const PhotoPage: React.FC<Props> = ({ params }) => {
-    const currentPhoto = photos.filter(({ id }) => id === +params.photoId)[0];
+    const currentPhoto = photos.filter(({ id }) => id === params.photoId)[0];
 
     return (
         <section>

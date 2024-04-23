@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
 
 export interface Photo {
-    id: number;
+    id: string;
     src: StaticImageData;
     title: string;
     location: string;
