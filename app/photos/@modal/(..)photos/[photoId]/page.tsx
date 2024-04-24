@@ -9,7 +9,7 @@ type Props = {
 };
 
 const ModalSlot: React.FC<Props> = ({ params }) => {
-    const currentPhoto = photos.filter(({ id }) => id === params.photoId)[0];
+    const currentPhoto = photos.filter(({ id }) => id === +params.photoId)[0];
 
     return (
         <Modal>
@@ -17,10 +17,11 @@ const ModalSlot: React.FC<Props> = ({ params }) => {
                 src={currentPhoto.src}
                 alt={currentPhoto.title}
                 loading='lazy'
-                className='w-[400px] object-cover aspect-square mb-4'
+                className='w-full object-cover aspect-square'
             />
-            <div>
-                <h1 className='text-xl mb-2'>{currentPhoto.title}</h1>
+
+            <div className='p-[8px] text-black'>
+                <h1 className='text-xl mb-[4px]'>{currentPhoto.title}</h1>
                 <h3 className='text-md'>{currentPhoto.location}</h3>
             </div>
         </Modal>
