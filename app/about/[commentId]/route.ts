@@ -1,4 +1,5 @@
 import { comments } from '@/data/comments';
+import { redirect } from 'next/navigation';
 
 type Props = {
     params: {
@@ -9,6 +10,7 @@ type Props = {
 export const GET = (_request: Request, { params }: Props) => {
     const currentComment = comments.filter(({ id }) => id === +params.commentId)[0];
 
+    +params.commentId > comments.length && redirect('/about');
     return Response.json(currentComment);
 };
 
