@@ -19,3 +19,11 @@ export const PATCH = async (request: Request, { params }: Props) => {
     comments[index].text = text;
     return Response.json(comments[index]);
 };
+
+export const DELETE = async (_request: Request, { params }: Props) => {
+    const index = comments.findIndex(({ id }) => id === +params.commentId);
+    const deletedComment = comments[index];
+
+    comments.splice(index, 1);
+    return Response.json(deletedComment);
+};
