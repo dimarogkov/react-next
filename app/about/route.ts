@@ -12,6 +12,7 @@ export const GET = async (request: NextRequest) => {
     return Response.json(filteredComments);
 };
 
+
 export const POST = async (request: Request) => {
     const { text } = await request.json();
     const newComment = {
